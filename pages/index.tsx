@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import Header from '../components/Header';
+import Header from '@/components/Header';
 import { sanityClient, urlFor } from '@/sanity';
-import { Post } from '../typings';
+import { Post } from '@/typings';
 import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 
