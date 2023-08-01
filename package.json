@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
+    "@portabletext/react": "^3.0.4",
+    "@sanity/client": "^6.2.0",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
     "next": "13.4.12",
+    "next-sanity": "^5.1.2",
+    "next-sanity-client": "^1.0.6",
+    "postcss": "8.4.27",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.2",
+    "react-portable-text": "^0.6.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
   }
 }
