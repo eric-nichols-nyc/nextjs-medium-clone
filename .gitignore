@@ -35,4 +35,3 @@ yarn-error.log*
 next-env.d.ts
 
 medium-clone/node_modules
-medium-clone/dist
