@@ -18,7 +18,6 @@ interface IFormInput {
 }
 
 function Post({ post }: Props) {
-  console.log('Post = ', post);
   // connect form
   const {
     register,
@@ -29,12 +28,15 @@ function Post({ post }: Props) {
   const [submitted, setSubmitted] = React.useState<boolean>(false);
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log(data);
     // post to backend
     try {
       const res = await fetch('/api/createComment', {
         method: 'POST',
         body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_SANITY_API_TOKEN,
+        },
       });
       console.log(res);
       setSubmitted(true);
