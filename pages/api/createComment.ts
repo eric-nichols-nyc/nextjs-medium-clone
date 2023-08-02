@@ -1,12 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient, groq } from 'next-sanity';
-import SanityClient from 'next-sanity-client';
+import { createClient } from 'next-sanity';
 
 const config = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  useCdn: false,
+  useCdn: process.env.NODE_ENV === 'production',
   token: process.env.SANITY_API_TOKEN,
   apiVersion: '2023-07-31',
 };
